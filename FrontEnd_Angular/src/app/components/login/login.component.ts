@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   // public password:AbstractControl;
   // public submitted:boolean = false;
   unUsuario: Usuario = new Usuario('','');
-  url: string = 'http://localhost:8080/servidor/BackEnd-PHP-jwt/api/ingreso/';
+  url: string = 'https://pps-tomas.000webhostapp.com/BackEnd-PHP-jwt/api/ingreso/';
 
   constructor( private router: Router, private ws: WsService) {
     this.unUsuario.correo = 'algo';

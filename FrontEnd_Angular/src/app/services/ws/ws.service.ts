@@ -10,7 +10,7 @@ import { AuthHttp } from 'angular2-jwt';
 @Injectable()
 export class WsService {
 
-  url: string = 'http://localhost:8080/servidor/BackEnd-PHP-jwt/api/';
+  url: string = 'https://pps-tomas.000webhostapp.com/BackEnd-PHP-jwt/api/';
 
   constructor(public http: Http, private authHttp: AuthHttp)
   {
@@ -30,6 +30,7 @@ export class WsService {
   }
 post(data: Object)
   {
+    console.log('data' + data.toString());
     return this.http.post(this.url+"ingreso/", data)
     .toPromise()
     .then( this.extractData )
